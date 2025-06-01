@@ -1,0 +1,1215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Madhu Photography IT Solution - Capturing Your Special Moments</title>
+    <link rel="icon" href="https://placehold.co/32x32/000000/FFFFFF?text=MP" type="image/x-icon">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        /*
+         * Custom CSS for Madhu Photography IT Solution
+         * Developed by Jay Sharma, 2024
+         *
+         * This section enhances Bootstrap's default styles, adds custom
+         * aesthetics, and ensures a consistent look and feel across the website.
+         */
+
+        :root {
+            --primary-color: #8A2BE2; /* Violet */
+            --secondary-color: #FFD700; /* Gold */
+            --dark-color: #2c3e50; /* Dark Blue */
+            --light-color: #ecf0f1; /* Light Gray */
+            --text-color: #34495e; /* Darker Gray */
+            --white-color: #ffffff;
+            --black-color: #000000;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--light-color);
+            overflow-x: hidden; /* Prevent horizontal scrolling */
+        }
+
+        /* General Styling */
+        .section-padding {
+            padding: 80px 0; /* Consistent padding for sections */
+        }
+
+        .section-heading {
+            font-size: 2.8rem;
+            font-weight: 700;
+            color: var(--dark-color);
+            margin-bottom: 50px;
+            position: relative;
+            text-align: center;
+        }
+
+        .section-heading::after {
+            content: '';
+            position: absolute;
+            width: 80px;
+            height: 4px;
+            background-color: var(--primary-color);
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            border-radius: 50px;
+        }
+
+        /* Navbar Styling */
+        .navbar {
+            background-color: var(--dark-color) !important;
+            padding: 15px 0;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .navbar-brand {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--white-color) !important;
+            display: flex;
+            align-items: center;
+            border-radius: 8px; /* Rounded corners for brand */
+        }
+
+        .navbar-brand img {
+            height: 40px;
+            margin-right: 10px;
+            border-radius: 50%; /* Circular logo */
+        }
+
+        .navbar-nav .nav-link {
+            color: var(--white-color) !important;
+            font-weight: 500;
+            font-size: 1.1rem;
+            margin: 0 15px;
+            position: relative;
+            transition: color 0.3s ease;
+        }
+
+        .navbar-nav .nav-link:hover,
+        .navbar-nav .nav-link.active {
+            color: var(--secondary-color) !important;
+        }
+
+        .navbar-nav .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            background-color: var(--secondary-color);
+            bottom: -5px;
+            left: 0;
+            transition: width 0.3s ease;
+        }
+
+        .navbar-nav .nav-link:hover::after,
+        .navbar-nav .nav-link.active::after {
+            width: 100%;
+        }
+
+        .navbar-toggler {
+            border-color: rgba(255, 255, 255, 0.5) !important;
+        }
+
+        .navbar-toggler-icon {
+            background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 0.8%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
+        }
+
+        /* Hero Section */
+        #hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://placehold.co/1920x1080/000000/FFFFFF?text=Capturing+Your+Precious+Moments') no-repeat center center/cover;
+            color: var(--white-color);
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        #hero .hero-content {
+            z-index: 1;
+        }
+
+        #hero h1 {
+            font-size: 4.5rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+        }
+
+        #hero p {
+            font-size: 1.5rem;
+            margin-bottom: 40px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .btn-primary-custom {
+            background-color: var(--primary-color);
+            border-color: var(--primary-color);
+            color: var(--white-color);
+            padding: 15px 35px;
+            font-size: 1.2rem;
+            font-weight: 600;
+            border-radius: 50px;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .btn-primary-custom:hover {
+            background-color: var(--secondary-color);
+            border-color: var(--secondary-color);
+            color: var(--dark-color);
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        /* About Section */
+        #about {
+            background-color: var(--white-color);
+        }
+
+        #about img {
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            max-width: 100%;
+            height: auto;
+        }
+
+        #about h2 {
+            color: var(--primary-color);
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+
+        #about p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin-bottom: 15px;
+        }
+
+        .about-list li {
+            font-size: 1.1rem;
+            margin-bottom: 10px;
+            list-style: none; /* Remove default bullet */
+        }
+
+        .about-list li i {
+            color: var(--primary-color);
+            margin-right: 10px;
+        }
+
+        /* Services Section */
+        #services {
+            background-color: var(--light-color);
+        }
+
+        .service-card {
+            background-color: var(--white-color);
+            border-radius: 15px;
+            padding: 30px;
+            text-align: center;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s ease;
+            height: 100%; /* Ensure cards have equal height */
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        .service-card .icon {
+            font-size: 3.5rem;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+        }
+
+        .service-card h3 {
+            font-size: 1.8rem;
+            font-weight: 600;
+            color: var(--dark-color);
+            margin-bottom: 15px;
+        }
+
+        .service-card p {
+            font-size: 1rem;
+            line-height: 1.7;
+            flex-grow: 1; /* Allow paragraph to take available space */
+        }
+
+        /* Portfolio/Gallery Section */
+        #portfolio {
+            background-color: var(--white-color);
+        }
+
+        .portfolio-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px; /* Spacing between items */
+        }
+
+        .portfolio-item img {
+            width: 100%;
+            height: 300px; /* Fixed height for gallery images */
+            object-fit: cover; /* Cover the area, crop if necessary */
+            display: block;
+            transition: transform 0.4s ease;
+        }
+
+        .portfolio-item:hover img {
+            transform: scale(1.05);
+        }
+
+        .portfolio-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            color: var(--white-color);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            transition: opacity 0.4s ease;
+            border-radius: 10px;
+        }
+
+        .portfolio-item:hover .portfolio-overlay {
+            opacity: 1;
+        }
+
+        .portfolio-overlay h4 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+            font-weight: 600;
+            text-align: center;
+        }
+
+        .portfolio-overlay p {
+            font-size: 1rem;
+            text-align: center;
+            padding: 0 20px;
+        }
+
+        /* Testimonials Section */
+        #testimonials {
+            background-color: var(--light-color);
+        }
+
+        .testimonial-card {
+            background-color: var(--white-color);
+            border-radius: 15px;
+            padding: 40px;
+            text-align: center;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+            margin-bottom: 30px;
+            height: 100%; /* Ensure cards have equal height */
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .testimonial-card .quote-icon {
+            font-size: 3rem;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+        }
+
+        .testimonial-card p {
+            font-style: italic;
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin-bottom: 25px;
+            flex-grow: 1;
+        }
+
+        .testimonial-card .client-info h5 {
+            font-weight: 600;
+            color: var(--dark-color);
+            margin-bottom: 5px;
+        }
+
+        .testimonial-card .client-info span {
+            font-size: 0.9rem;
+            color: #7f8c8d;
+        }
+
+        /* Contact Section */
+        #contact {
+            background-color: var(--white-color);
+        }
+
+        #contact .contact-info p {
+            font-size: 1.1rem;
+            margin-bottom: 15px;
+        }
+
+        #contact .contact-info i {
+            color: var(--primary-color);
+            margin-right: 10px;
+            font-size: 1.3rem;
+        }
+
+        #contact .form-control {
+            border-radius: 8px;
+            padding: 12px 15px;
+            border: 1px solid #ced4da;
+            transition: all 0.3s ease;
+        }
+
+        #contact .form-control:focus {
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 0.25rem rgba(138, 43, 226, 0.25);
+        }
+
+        #contact textarea.form-control {
+            min-height: 150px;
+            resize: vertical;
+        }
+
+        #contact .btn-submit {
+            width: 100%;
+            background-color: var(--primary-color);
+            border-color: var(--primary-color);
+            color: var(--white-color);
+            padding: 15px 0;
+            font-size: 1.2rem;
+            font-weight: 600;
+            border-radius: 50px;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        #contact .btn-submit:hover {
+            background-color: var(--secondary-color);
+            border-color: var(--secondary-color);
+            color: var(--dark-color);
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Footer Styling */
+        #footer {
+            background-color: var(--dark-color);
+            color: var(--white-color);
+            padding: 40px 0;
+            text-align: center;
+            font-size: 0.95rem;
+        }
+
+        #footer .social-links a {
+            color: var(--white-color);
+            font-size: 1.5rem;
+            margin: 0 10px;
+            transition: color 0.3s ease;
+        }
+
+        #footer .social-links a:hover {
+            color: var(--secondary-color);
+        }
+
+        #footer p {
+            margin-top: 20px;
+            margin-bottom: 0;
+        }
+
+        /* Back to Top Button */
+        #back-to-top {
+            display: none; /* Hidden by default */
+            position: fixed; /* Fixed position */
+            bottom: 30px; /* Place at the bottom */
+            right: 30px; /* Place at the right */
+            z-index: 99; /* High z-index to be on top */
+            border: none; /* Remove borders */
+            outline: none; /* Remove outline */
+            background-color: var(--primary-color); /* Set a background color */
+            color: white; /* Text color */
+            cursor: pointer; /* Add a mouse pointer on hover */
+            padding: 15px; /* Some padding */
+            border-radius: 50%; /* Rounded corners */
+            font-size: 1.2rem; /* Increase font size */
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        #back-to-top:hover {
+            background-color: var(--secondary-color); /* Add a darker background on hover */
+            transform: translateY(-5px);
+        }
+
+        /* Responsive Adjustments */
+        @media (max-width: 1200px) {
+            #hero h1 {
+                font-size: 4rem;
+            }
+        }
+
+        @media (max-width: 992px) {
+            .section-heading {
+                font-size: 2.5rem;
+            }
+
+            #hero h1 {
+                font-size: 3.5rem;
+            }
+
+            #hero p {
+                font-size: 1.3rem;
+            }
+
+            .navbar-nav {
+                text-align: center;
+                margin-top: 20px;
+            }
+
+            .navbar-nav .nav-link {
+                margin: 10px 0;
+            }
+
+            #about img {
+                margin-bottom: 30px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .section-padding {
+                padding: 60px 0;
+            }
+
+            .section-heading {
+                font-size: 2.2rem;
+                margin-bottom: 40px;
+            }
+
+            #hero {
+                height: 80vh;
+            }
+
+            #hero h1 {
+                font-size: 2.8rem;
+            }
+
+            #hero p {
+                font-size: 1.1rem;
+            }
+
+            .btn-primary-custom {
+                padding: 12px 25px;
+                font-size: 1rem;
+            }
+
+            .service-card, .testimonial-card {
+                margin-bottom: 25px;
+            }
+
+            .portfolio-item img {
+                height: 250px;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .section-padding {
+                padding: 40px 0;
+            }
+
+            .section-heading {
+                font-size: 1.8rem;
+                margin-bottom: 30px;
+            }
+
+            #hero h1 {
+                font-size: 2rem;
+            }
+
+            #hero p {
+                font-size: 1rem;
+            }
+
+            .navbar-brand {
+                font-size: 1.5rem;
+            }
+
+            .navbar-brand img {
+                height: 30px;
+            }
+
+            .service-card, .testimonial-card {
+                padding: 25px;
+            }
+
+            .portfolio-item img {
+                height: 200px;
+            }
+
+            #contact .btn-submit {
+                font-size: 1.1rem;
+                padding: 12px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!--
+     * Navbar Section
+     * This navigation bar uses Bootstrap's responsive features,
+     * including a toggler for smaller screens.
+     -->
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#hero">
+                <img src="https://placehold.co/50x50/FFFFFF/000000?text=MP" alt="Madhu Photography Logo">
+                Madhu Photography IT Solution
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#hero">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#services">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#portfolio">Portfolio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#testimonials">Testimonials</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!--
+     * Hero Section
+     * The main banner of the website, designed to be visually striking
+     * with a large image and a clear call to action.
+     -->
+    <section id="hero" class="d-flex align-items-center justify-content-center">
+        <div class="container text-center hero-content">
+            <h1 class="animate__animated animate__fadeInDown">Capturing Your Special Moments with Passion</h1>
+            <p class="lead animate__animated animate__fadeInUp">
+                From weddings to corporate events, we transform fleeting moments into timeless memories.
+            </p>
+            <a href="#services" class="btn btn-primary-custom animate__animated animate__zoomIn">Explore Our Services</a>
+        </div>
+    </section>
+
+    <!--
+     * About Us Section
+     * Provides information about the company and the developer, Jay Sharma.
+     * Includes a descriptive text and a list of key attributes.
+     -->
+    <section id="about" class="section-padding">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-4 mb-lg-0">
+                    <img src="https://placehold.co/800x600/CCCCCC/000000?text=Jay+Sharma+-+Founder" class="img-fluid" alt="About Madhu Photography">
+                </div>
+                <div class="col-lg-6">
+                    <h2 class="section-heading text-start">About Madhu Photography IT Solution</h2>
+                    <p>
+                        Welcome to <strong>Madhu Photography IT Solution</strong>, where every click tells a story.
+                        Founded by <strong>Jay Sharma in 2024</strong>, our mission is to provide exceptional
+                        photography services that perfectly capture the essence and emotion of your most important events.
+                    </p>
+                    <p>
+                        We believe that great photography is more than just taking pictures; it's about
+                        understanding your vision, anticipating moments, and creating stunning visuals
+                        that you'll cherish for a lifetime. With state-of-the-art equipment and a keen eye
+                        for detail, we ensure every photograph is a masterpiece.
+                    </p>
+                    <ul class="list-unstyled about-list">
+                        <li><i class="fas fa-check-circle"></i> Experienced & Passionate Photographers</li>
+                        <li><i class="fas fa-check-circle"></i> High-Quality Equipment & Technology</li>
+                        <li><i class="fas fa-check-circle"></i> Personalized Service & Attention to Detail</li>
+                        <li><i class="fas fa-check-circle"></i> Timely Delivery of Edited Photos</li>
+                        <li><i class="fas fa-check-circle"></i> Creative & Unique Storytelling Through Images</li>
+                    </ul>
+                    <p class="mt-4">
+                        "Developed with dedication by Jay Sharma in 2024, this website reflects our commitment
+                        to excellence and our passion for visual artistry."
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--
+     * Services Section
+     * Highlights the various photography services offered by Madhu Photography.
+     * Each service is presented in a card format with an icon, title, and description.
+     -->
+    <section id="services" class="section-padding">
+        <div class="container">
+            <h2 class="section-heading">Our Photography Services</h2>
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-4">
+                    <div class="service-card">
+                        <div class="icon">
+                            <i class="fas fa-ring"></i>
+                        </div>
+                        <h3>Wedding Photography</h3>
+                        <p>
+                            We capture the magic of your special day, from candid moments to grand ceremonies.
+                            Preserving every emotion and detail, ensuring your wedding memories last forever.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="service-card">
+                        <div class="icon">
+                            <i class="fas fa-birthday-cake"></i>
+                        </div>
+                        <h3>Birthday & Event Photography</h3>
+                        <p>
+                            Celebrating milestones and special occasions with vibrant and lively photographs.
+                            We cover birthdays, anniversaries, graduations, and more.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="service-card">
+                        <div class="icon">
+                            <i class="fas fa-briefcase"></i>
+                        </div>
+                        <h3>Corporate Event Coverage</h3>
+                        <p>
+                            Professional photography for conferences, seminars, product launches, and corporate gatherings.
+                            Showcase your brand's professionalism and success.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="service-card">
+                        <div class="icon">
+                            <i class="fas fa-camera-retro"></i>
+                        </div>
+                        <h3>Product Photography</h3>
+                        <p>
+                            High-quality product images for e-commerce, catalogs, and marketing materials.
+                            Make your products stand out with stunning visuals.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="service-card">
+                        <div class="icon">
+                            <i class="fas fa-user-circle"></i>
+                        </div>
+                        <h3>Portrait Photography</h3>
+                        <p>
+                            Individual, family, and professional portraits that reflect personality and style.
+                            Perfect for portfolios, social media, or cherished family memories.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="service-card">
+                        <div class="icon">
+                            <i class="fas fa-landmark"></i>
+                        </div>
+                        <h3>Architectural Photography</h3>
+                        <p>
+                            Showcasing buildings, interiors, and real estate with compelling compositions and lighting.
+                            Ideal for real estate agents, architects, and designers.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--
+     * Portfolio/Gallery Section
+     * Displays a collection of photographs categorized by event type.
+     * Uses a grid layout to showcase multiple images effectively.
+     -->
+    <section id="portfolio" class="section-padding">
+        <div class="container">
+            <h2 class="section-heading">Our Stunning Portfolio</h2>
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-4">
+                    <div class="portfolio-item">
+                        <img src="https://placehold.co/800x600/E0BBE4/000000?text=Wedding+Joy" alt="Wedding Photo 1">
+                        <div class="portfolio-overlay">
+                            <h4>Wedding Photography</h4>
+                            <p>Joyful moments from a beautiful wedding ceremony.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="portfolio-item">
+                        <img src="https://placehold.co/800x600/DAF7A6/000000?text=Bridal+Portrait" alt="Wedding Photo 2">
+                        <div class="portfolio-overlay">
+                            <h4>Wedding Photography</h4>
+                            <p>Elegant bridal portrait capturing timeless beauty.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="portfolio-item">
+                        <img src="https://placehold.co/800x600/FFC0CB/000000?text=Couple+Shoot" alt="Wedding Photo 3">
+                        <div class="portfolio-overlay">
+                            <h4>Wedding Photography</h4>
+                            <p>Romantic couple shoot with stunning backdrops.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4">
+                    <div class="portfolio-item">
+                        <img src="https://placehold.co/800x600/ADD8E6/000000?text=Birthday+Fun" alt="Birthday Photo 1">
+                        <div class="portfolio-overlay">
+                            <h4>Birthday & Events</h4>
+                            <p>Candid shots from a lively birthday celebration.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="portfolio-item">
+                        <img src="https://placehold.co/800x600/90EE90/000000?text=Event+Gathering" alt="Event Photo 1">
+                        <div class="portfolio-overlay">
+                            <h4>Birthday & Events</h4>
+                            <p>Memorable moments from a grand event gathering.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="portfolio-item">
+                        <img src="https://placehold.co/800x600/FFB6C1/000000?text=Anniversary+Celebration" alt="Anniversary Photo">
+                        <div class="portfolio-overlay">
+                            <h4>Birthday & Events</h4>
+                            <p>Capturing the joy of an anniversary celebration.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4">
+                    <div class="portfolio-item">
+                        <img src="https://placehold.co/800x600/87CEEB/000000?text=Conference+Highlights" alt="Corporate Photo 1">
+                        <div class="portfolio-overlay">
+                            <h4>Corporate Events</h4>
+                            <p>Keynote speaker at a successful business conference.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="portfolio-item">
+                        <img src="https://placehold.co/800x600/B0E0E6/000000?text=Product+Launch" alt="Corporate Photo 2">
+                        <div class="portfolio-overlay">
+                            <h4>Corporate Events</h4>
+                            <p>Exciting moments from a new product launch event.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="portfolio-item">
+                        <img src="https://placehold.co/800x600/C0C0C0/000000?text=Team+Building" alt="Corporate Photo 3">
+                        <div class="portfolio-overlay">
+                            <h4>Corporate Events</h4>
+                            <p>Dynamic shots from a team-building activity.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4">
+                    <div class="portfolio-item">
+                        <img src="https://placehold.co/800x600/F0E68C/000000?text=Jewelry+Product" alt="Product Photo 1">
+                        <div class="portfolio-overlay">
+                            <h4>Product Photography</h4>
+                            <p>Exquisite detail of a jewelry product.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="portfolio-item">
+                        <img src="https://placehold.co/800x600/DDA0DD/000000?text=Food+Styling" alt="Product Photo 2">
+                        <div class="portfolio-overlay">
+                            <h4>Product Photography</h4>
+                            <p>Appetizing food styling for a restaurant menu.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="portfolio-item">
+                        <img src="https://placehold.co/800x600/98FB98/000000?text=Tech+Gadget" alt="Product Photo 3">
+                        <div class="portfolio-overlay">
+                            <h4>Product Photography</h4>
+                            <p>Sleek shot of a modern tech gadget.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4">
+                    <div class="portfolio-item">
+                        <img src="https://placehold.co/800x600/FFDAB9/000000?text=Professional+Headshot" alt="Portrait Photo 1">
+                        <div class="portfolio-overlay">
+                            <h4>Portrait Photography</h4>
+                            <p>Sharp professional headshot for a corporate profile.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="portfolio-item">
+                        <img src="https://placehold.co/800x600/FFE4E1/000000?text=Family+Portrait" alt="Portrait Photo 2">
+                        <div class="portfolio-overlay">
+                            <h4>Portrait Photography</h4>
+                            <p>Heartwarming family portrait in a natural setting.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="portfolio-item">
+                        <img src="https://placehold.co/800x600/AFEEEE/000000?text=Fashion+Portrait" alt="Portrait Photo 3">
+                        <div class="portfolio-overlay">
+                            <h4>Portrait Photography</h4>
+                            <p>Stylish fashion portrait with creative lighting.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--
+     * Testimonials Section
+     * Features feedback from satisfied clients, building trust and credibility.
+     * Uses a card layout for each testimonial.
+     -->
+    <section id="testimonials" class="section-padding">
+        <div class="container">
+            <h2 class="section-heading">What Our Clients Say</h2>
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-4">
+                    <div class="testimonial-card">
+                        <div class="quote-icon">
+                            <i class="fas fa-quote-left"></i>
+                        </div>
+                        <p>
+                            "Madhu Photography IT Solution captured our wedding day beautifully.
+                            Every photo tells a story, and their team was incredibly professional and friendly.
+                            Highly recommend their services!"
+                        </p>
+                        <div class="client-info">
+                            <h5>Priya Sharma</h5>
+                            <span>Bride, Delhi</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="testimonial-card">
+                        <div class="quote-icon">
+                            <i class="fas fa-quote-left"></i>
+                        </div>
+                        <p>
+                            "For our corporate event, Madhu Photography delivered outstanding results.
+                            The photos were crisp, professional, and perfectly captured the energy of the day.
+                            A truly reliable partner."
+                        </p>
+                        <div class="client-info">
+                            <h5>Rahul Verma</h5>
+                            <span>Event Manager, Tech Solutions Inc.</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="testimonial-card">
+                        <div class="quote-icon">
+                            <i class="fas fa-quote-left"></i>
+                        </div>
+                        <p>
+                            "Jay Sharma's team transformed my product images! The quality and attention to detail
+                            were exceptional, leading to a significant boost in my online sales. Thank you!"
+                        </p>
+                        <div class="client-info">
+                            <h5>Anjali Singh</h5>
+                            <span>E-commerce Business Owner</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="testimonial-card">
+                        <div class="quote-icon">
+                            <i class="fas fa-quote-left"></i>
+                        </div>
+                        <p>
+                            "The birthday party photos were absolutely delightful! They captured all the fun and
+                            laughter, and the kids looked amazing. We're so happy with the memories created."
+                        </p>
+                        <div class="client-info">
+                            <h5>Suresh Kumar</h5>
+                            <span>Parent, Gurugram</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="testimonial-card">
+                        <div class="quote-icon">
+                            <i class="fas fa-quote-left"></i>
+                        </div>
+                        <p>
+                            "My professional headshots were exactly what I needed. Madhu Photography's team
+                            made me feel comfortable and guided me through the poses. Highly recommend for portraits!"
+                        </p>
+                        <div class="client-info">
+                            <h5>Deepa Reddy</h5>
+                            <span>Marketing Professional</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="testimonial-card">
+                        <div class="quote-icon">
+                            <i class="fas fa-quote-left"></i>
+                        </div>
+                        <p>
+                            "From start to finish, the experience was seamless. The team was punctual,
+                            creative, and delivered stunning photos of our family gathering. Truly impressed!"
+                        </p>
+                        <div class="client-info">
+                            <h5>Vikramjeet Singh</h5>
+                            <span>Family Client</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--
+     * Contact Section
+     * Provides contact information and a form for inquiries.
+     * Includes placeholders for a map and social media links.
+     -->
+    <section id="contact" class="section-padding">
+        <div class="container">
+            <h2 class="section-heading">Get In Touch</h2>
+            <div class="row">
+                <div class="col-lg-6 mb-4 mb-lg-0">
+                    <div class="contact-info">
+                        <p><i class="fas fa-map-marker-alt"></i> 123 Photography Lane, Cyber City, Gurugram, Haryana, India</p>
+                        <p><i class="fas fa-phone"></i> +91 98765 43210</p>
+                        <p><i class="fas fa-envelope"></i> info@madhuphotography.com</p>
+                        <p><i class="fas fa-clock"></i> Mon - Sat: 9:00 AM - 6:00 PM</p>
+                        <h4 class="mt-4">Find Us on Map</h4>
+                        <div class="map-placeholder bg-light rounded-3 shadow-sm" style="height: 300px; width: 100%; display: flex; align-items: center; justify-content: center; font-size: 1.2rem; color: #7f8c8d;">
+                            <i class="fas fa-map-marked-alt me-2"></i> Map Location Placeholder
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <form id="contactForm">
+                        <div class="mb-3">
+                            <label for="name" class="form-label visually-hidden">Your Name</label>
+                            <input type="text" class="form-control" id="name" placeholder="Your Name" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label visually-hidden">Your Email</label>
+                            <input type="email" class="form-control" id="email" placeholder="Your Email" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="subject" class="form-label visually-hidden">Subject</label>
+                            <input type="text" class="form-control" id="subject" placeholder="Subject" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="message" class="form-label visually-hidden">Message</label>
+                            <textarea class="form-control" id="message" rows="5" placeholder="Your Message" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-submit">Send Message</button>
+                        <div id="formMessage" class="mt-3 text-center" style="display: none;"></div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--
+     * Footer Section
+     * Contains copyright information and social media links.
+     -->
+    <footer id="footer">
+        <div class="container">
+            <div class="social-links">
+                <a href="#" class="text-decoration-none"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="text-decoration-none"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="text-decoration-none"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="text-decoration-none"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+            <p>&copy; <span id="currentYear"></span> Madhu Photography IT Solution. All Rights Reserved.</p>
+            <p>Developed with <i class="fas fa-heart text-danger"></i> by Jay Sharma</p>
+        </div>
+    </footer>
+
+    <button id="back-to-top" title="Go to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        /*
+         * Custom JavaScript for Madhu Photography IT Solution
+         * Developed by Jay Sharma, 2024
+         *
+         * This script adds interactive functionalities to the website,
+         * such as smooth scrolling, a dynamic year in the footer,
+         * and a basic contact form submission handler.
+         */
+
+        document.addEventListener('DOMContentLoaded', function() {
+            // Set current year in footer dynamically
+            const currentYearSpan = document.getElementById('currentYear');
+            if (currentYearSpan) {
+                currentYearSpan.textContent = new Date().getFullYear();
+            }
+
+            // Smooth scrolling for navigation links
+            document.querySelectorAll('.navbar-nav .nav-link').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault(); // Prevent default anchor click behavior
+
+                    const targetId = this.getAttribute('href'); // Get the href attribute
+                    const targetSection = document.querySelector(targetId); // Select the target section
+
+                    // Check if the target section exists
+                    if (targetSection) {
+                        const navbarHeight = document.querySelector('.navbar').offsetHeight; // Get navbar height
+                        const offsetPosition = targetSection.offsetTop - navbarHeight; // Calculate scroll position
+
+                        // Scroll to the calculated position smoothly
+                        window.scrollTo({
+                            top: offsetPosition,
+                            behavior: 'smooth'
+                        });
+
+                        // Remove 'active' class from all links
+                        document.querySelectorAll('.navbar-nav .nav-link').forEach(link => {
+                            link.classList.remove('active');
+                        });
+                        // Add 'active' class to the clicked link
+                        this.classList.add('active');
+
+                        // For Bootstrap collapse: close the navbar on mobile after clicking a link
+                        const navbarCollapse = document.getElementById('navbarNav');
+                        const bsCollapse = bootstrap.Collapse.getInstance(navbarCollapse);
+                        if (bsCollapse && navbarCollapse.classList.contains('show')) {
+                            bsCollapse.hide();
+                        }
+                    }
+                });
+            });
+
+            // Highlight active nav link on scroll
+            const sections = document.querySelectorAll('section');
+            const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
+
+            function highlightNavLink() {
+                let current = '';
+                sections.forEach(section => {
+                    const sectionTop = section.offsetTop - document.querySelector('.navbar').offsetHeight;
+                    const sectionHeight = section.clientHeight;
+                    if (pageYOffset >= sectionTop && pageYOffset < sectionTop + sectionHeight) {
+                        current = '#' + section.getAttribute('id');
+                    }
+                });
+
+                navLinks.forEach(link => {
+                    link.classList.remove('active');
+                    if (link.getAttribute('href') === current) {
+                        link.classList.add('active');
+                    }
+                });
+            }
+
+            window.addEventListener('scroll', highlightNavLink);
+            highlightNavLink(); // Call on load to set initial active link
+
+            // Back to Top Button functionality
+            const backToTopButton = document.getElementById('back-to-top');
+
+            window.addEventListener('scroll', function() {
+                if (window.scrollY > 300) { // Show button after scrolling 300px
+                    backToTopButton.style.display = 'block';
+                } else {
+                    backToTopButton.style.display = 'none';
+                }
+            });
+
+            backToTopButton.addEventListener('click', function() {
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            });
+
+            // Basic Contact Form Submission Handler
+            const contactForm = document.getElementById('contactForm');
+            const formMessage = document.getElementById('formMessage');
+
+            if (contactForm) {
+                contactForm.addEventListener('submit', function(e) {
+                    e.preventDefault(); // Prevent actual form submission
+
+                    // Simulate form submission (e.g., sending data to a server)
+                    const name = document.getElementById('name').value;
+                    const email = document.getElementById('email').value;
+                    const subject = document.getElementById('subject').value;
+                    const message = document.getElementById('message').value;
+
+                    // In a real application, you would send this data to a backend server
+                    // using fetch() or XMLHttpRequest.
+                    console.log('Form Submitted:', { name, email, subject, message });
+
+                    // Display a success message to the user
+                    formMessage.style.display = 'block';
+                    formMessage.innerHTML = `
+                        <div class="alert alert-success alert-dismissible fade show" role="alert">
+                            Thank you, <strong>${name}</strong>! Your message has been sent successfully.
+                            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                        </div>
+                    `;
+
+                    // Clear the form fields after submission
+                    contactForm.reset();
+
+                    // Hide message after 5 seconds
+                    setTimeout(() => {
+                        formMessage.style.display = 'none';
+                    }, 5000);
+                });
+            }
+        });
+    </script>
+</body>
+</html>
